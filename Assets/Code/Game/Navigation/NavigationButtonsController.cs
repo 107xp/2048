@@ -1,8 +1,13 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NavigationButtonsController : MonoBehaviour
 {
     public GameObject mainMenu_GO, inGame_GO, playStyle_GO;
+
+    public Button rememberChoice_BT;
+
+    public Sprite rememberChoiceSelected, rememberChoiceUnselected;
 
     public void googleLogin()
     {
@@ -20,6 +25,7 @@ public class NavigationButtonsController : MonoBehaviour
         {
             //selecionar playstyle
             playStyle_GO.SetActive(true);
+            setRememberChoiceSpriteButton(0);
         }
         else
         {
@@ -28,7 +34,6 @@ public class NavigationButtonsController : MonoBehaviour
         }
 
         mainMenu_GO.SetActive(false);
-
     }
 
     public void createAMatch()
@@ -63,5 +68,40 @@ public class NavigationButtonsController : MonoBehaviour
     {
         inGame_GO.SetActive(false);
         mainMenu_GO.SetActive(true);
+    }
+
+    public void rememberMyChoice()
+    {
+        if (PlayerPrefs.GetInt(Constants.MY_CHOISE_OF_GAME, 0) == 0)
+        {
+            //selecionar para lembrar
+            PlayerPrefs.SetInt(Constants.MY_CHOISE_OF_GAME, 1);
+            setRememberChoiceSpriteButton(1);
+        }
+        else
+        {
+            //selecionar para não lembrar
+            PlayerPrefs.SetInt(Constants.MY_CHOISE_OF_GAME, 0);
+            setRememberChoiceSpriteButton(0);
+        }
+    }
+
+    public void setRememberChoiceSpriteButton(int choice)
+    {
+        if (choice == 0)
+        {
+            //selecionar para lembrar
+            rememberChoice_BT.GetComponent<Image>().sprite = rememberChoiceUnselected;
+        }
+        else
+        {
+            //selecionar para não lembrar
+            rememberChoice_BT.GetComponent<Image>().sprite = rememberChoiceSelected;
+        }
+    }
+
+    public void clearCache()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }
