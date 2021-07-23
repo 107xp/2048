@@ -1,0 +1,32 @@
+fileFormatVersion: 2
+guid: 89bc81d00f8342946833452c66b7f4d7
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Metropolis
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d6c7261b33a104447a368fd847d787e6, type: 3}
+  - {fileID: 12800000, guid: 50c5c82924850eb4993699138b43790d, type: 3}
+  - {fileID: 12800000, guid: 7035a5c9cb6e1b543b69c260e9ceb6b1, type: 3}
+  - {fileID: 12800000, guid: 96872733d77978945abc2e18b9ae18a8, type: 3}
+  - {fileID: 12800000, guid: f6304d359d49c6e41a20692b81a5ef95, type: 3}
+  - {fileID: 12800000, guid: e635c0ad68ea5014ea900d54a1febb59, type: 3}
+  - {fileID: 12800000, guid: 7188c9ecef0576f4ca35f80e889000b6, type: 3}
+  - {fileID: 12800000, guid: 79237afd3edc6af45bb1668c6b07a3dd, type: 3}
+  - {fileID: 12800000, guid: d308f3c18bc692c4590260ec6b4b3c58, type: 3}
+  - {fileID: 12800000, guid: 16d251a7ecfc6084aae809cac3a483b9, type: 3}
+  - {fileID: 12800000, guid: d6bba8cec3ae46a42b2901630b5eef00, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
